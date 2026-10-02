@@ -1,0 +1,141 @@
+/* Home Page Specific Styles */
+
+/* Hero Section */
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.hero-content {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  background-color: var(--color-primary-lightest);
+  color: var(--color-primary);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-6);
+  display: inline-block;
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.1;
+  margin-bottom: var(--space-6);
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto var(--space-8);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-trust {
+  margin-top: var(--space-8);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  display: flex;
+  gap: var(--space-6);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Features Section */
+.feature-card {
+  text-align: center;
+  padding: 2.5rem 2rem;
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--color-primary-lightest);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin: 0 auto var(--space-6);
+}
+
+.feature-card h3 {
+  margin-bottom: var(--space-3);
+}
+
+.feature-card p {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* How It Works Section */
+.steps-grid {
+  counter-reset: step-counter;
+}
+
+.step-card {
+  position: relative;
+  padding: var(--space-8);
+  text-align: center;
+}
+
+.step-number {
+  font-size: 3rem;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary-lightest);
+  font-family: var(--font-heading);
+  line-height: 1;
+  margin-bottom: var(--space-4);
+}
+
+.step-card h3 {
+  margin-bottom: var(--space-3);
+}
+
+/* Connecting line between steps on desktop */
+@media (min-width: 769px) {
+  .step-card:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 5rem;
+    right: -1rem;
+    width: 2rem;
+    border-top: 2px dashed var(--color-border);
+    z-index: -1;
+  }
+}
+
+/* Pricing Hero (reused on portfolio page) */
+.pricing-hero {
+  text-align: center;
+  padding-top: calc(80px + var(--space-16));
+}
+
+/* Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}

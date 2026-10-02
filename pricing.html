@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing — WebCraft | Transparent WaaS Plans</title>
+    <meta name="description" content="Choose from our transparent Website-as-a-Service plans. Setup Plan from ₹15,000 or Zero Down Plan with no upfront costs.">
+
+    <meta property="og:title" content="Pricing — WebCraft | Transparent WaaS Plans">
+    <meta property="og:description" content="Choose from our transparent Website-as-a-Service plans. Setup Plan from ₹15,000 or Zero Down Plan with no upfront costs.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages/pricing.css">
+
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container header-container">
+            <a href="/" class="logo" aria-label="WebCraft Home">◆ WebCraft</a>
+
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="/" class="nav-link">Home</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="pricing.html" class="nav-link active" aria-current="page">Pricing</a>
+                <a href="support.html" class="nav-link">Support</a>
+                <a href="pricing.html" class="btn btn-primary btn-sm nav-cta">Get Started</a>
+            </nav>
+
+            <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+            <a href="/" class="nav-link">Home</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="pricing.html" class="nav-link active">Pricing</a>
+            <a href="support.html" class="nav-link">Support</a>
+            <a href="pricing.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </header>
+
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="section pricing-hero">
+            <div class="container text-center">
+                <h1>Simple, Transparent Pricing</h1>
+                <p class="section-subtitle">No hidden fees. No surprises. Choose the plan that works for your business.</p>
+            </div>
+        </section>
+
+        <!-- Pricing Cards Section -->
+        <section class="section" id="plans">
+            <div class="container">
+                <div class="pricing-grid">
+
+                    <!-- Card 1: Setup Plan (Standard) -->
+                    <div class="card pricing-card">
+                        <span class="badge badge-primary">Standard</span>
+                        <h2 class="pricing-name">Setup Plan</h2>
+                        <div class="pricing-amount">
+                            <span class="currency">₹</span>15,000
+                            <span class="period">one-time setup</span>
+                        </div>
+                        <p class="pricing-recurring">+ ₹3,000/mo</p>
+                        <hr class="pricing-divider">
+                        <ul class="pricing-features" aria-label="Setup Plan features">
+                            <li>Managed Cloud Hosting</li>
+                            <li>Free SSL Certificate</li>
+                            <li>1 Hour Monthly Updates</li>
+                            <li>24/7 Email Support</li>
+                            <li>Weekly Backups</li>
+                            <li>Performance Monitoring</li>
+                            <li>Basic SEO Setup</li>
+                        </ul>
+                        <a href="#razorpay-setup" class="btn btn-primary" data-plan="setup" style="width:100%">Get Started</a>
+                        <p class="pricing-note">5-7 business days delivery</p>
+                    </div>
+
+                    <!-- Card 2: Zero Down Plan (Growth) — FEATURED -->
+                    <div class="card pricing-card pricing-card--featured">
+                        <span class="badge badge-popular">Most Popular</span>
+                        <h2 class="pricing-name">Zero Down Plan</h2>
+                        <div class="pricing-amount">
+                            <span class="currency">₹</span>0
+                            <span class="period">upfront</span>
+                        </div>
+                        <p class="pricing-recurring">₹6,000/mo</p>
+                        <p class="pricing-commitment">12-month commitment</p>
+                        <hr class="pricing-divider">
+                        <ul class="pricing-features" aria-label="Zero Down Plan features">
+                            <li>Everything in Setup Plan</li>
+                            <li>Priority Support (WhatsApp)</li>
+                            <li>2 Hours Monthly Updates</li>
+                            <li>Monthly SEO Reports</li>
+                            <li>Advanced Analytics Dashboard</li>
+                            <li>UPI AutoPay Integration</li>
+                            <li>Dedicated Account Manager</li>
+                        </ul>
+                        <a href="#razorpay-subscription" class="btn btn-primary" data-plan="growth" style="width:100%">Start Free</a>
+                        <p class="pricing-note">Keep your cash flow. Pay as you grow.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Plan Comparison</h2>
+                </div>
+                <div class="table-responsive">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Setup Plan (Standard)</th>
+                                <th>Zero Down Plan (Growth)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Upfront Cost</td>
+                                <td>₹15,000</td>
+                                <td>₹0</td>
+                            </tr>
+                            <tr>
+                                <td>Monthly Cost</td>
+                                <td>₹3,000</td>
+                                <td>₹6,000</td>
+                            </tr>
+                            <tr>
+                                <td>Monthly Updates</td>
+                                <td>1 Hour</td>
+                                <td>2 Hours</td>
+                            </tr>
+                            <tr>
+                                <td>Support Channel</td>
+                                <td>Email</td>
+                                <td>Priority + WhatsApp</td>
+                            </tr>
+                            <tr>
+                                <td>SEO Reports</td>
+                                <td class="cross">✗</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Advanced Analytics</td>
+                                <td class="cross">✗</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Dedicated Manager</td>
+                                <td class="cross">✗</td>
+                                <td class="check">✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+                <div class="accordion faq-section" role="list">
+
+                    <div class="accordion-item" role="listitem">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-1">
+                            <span>Who owns the website?</span>
+                            <span class="icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="accordion-content" id="faq-panel-1" role="region">
+                            <div class="accordion-content-inner">
+                                <p>The website is licensed to you for use. Full ownership transfers to you after 36 consecutive monthly payments. During the licensing period, WebCraft retains ownership of the design and code to protect both parties.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" role="listitem">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-2">
+                            <span>What counts as a "minor update"?</span>
+                            <span class="icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="accordion-content" id="faq-panel-2" role="region">
+                            <div class="accordion-content-inner">
+                                <p>Minor updates include text changes, image swaps, adding/removing menu items, updating contact information, changing colors, and similar small modifications. Major structural changes, new pages, or feature additions are quoted separately.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" role="listitem">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-3">
+                            <span>How do I cancel my subscription?</span>
+                            <span class="icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="accordion-content" id="faq-panel-3" role="region">
+                            <div class="accordion-content-inner">
+                                <p>You can cancel at any time with 30 days written notice. For the Zero Down Plan, early termination within the 12-month commitment period may incur a fee equal to 3 months of subscription cost. After the commitment period, cancel freely.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" role="listitem">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-4">
+                            <span>What happens if my payment fails?</span>
+                            <span class="icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="accordion-content" id="faq-panel-4" role="region">
+                            <div class="accordion-content-inner">
+                                <p>We provide a 7-day grace period for failed payments. During this time, your website remains fully operational. If payment is not resolved within 7 days, the site will be temporarily suspended until the balance is cleared.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" role="listitem">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-5">
+                            <span>Do you offer custom development?</span>
+                            <span class="icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="accordion-content" id="faq-panel-5" role="region">
+                            <div class="accordion-content-inner">
+                                <p>Yes! Our plans cover standard business websites. For e-commerce, custom web apps, or complex integrations, contact us for a custom quote.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" role="listitem">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-6">
+                            <span>What's included in the hosting?</span>
+                            <span class="icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="accordion-content" id="faq-panel-6" role="region">
+                            <div class="accordion-content-inner">
+                                <p>Enterprise-grade cloud hosting on AWS/DigitalOcean with 99.9% uptime SLA, automatic SSL, daily backups, CDN delivery, and DDoS protection.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-box text-center">
+                    <h2>Still Have Questions?</h2>
+                    <p>Our team is here to help you find the perfect plan.</p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/919999999999?text=Hi%2C%20I%27m%20interested%20in%20a%20new%20website." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">Chat on WhatsApp</a>
+                        <a href="portfolio.html" class="btn btn-secondary btn-lg">View Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <a href="/" class="logo">◆ WebCraft</a>
+                    <p>High-performance websites that drive revenue for your business.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="/">Home</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="support.html">Support</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WebCraft. All rights reserved.</p>
+                <p>Built with &hearts; for performance</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Widget -->
+    <div class="whatsapp-widget" aria-label="Chat with us on WhatsApp">
+        <span class="whatsapp-tooltip">Chat with us</span>
+        <a href="https://wa.me/919999999999?text=Hi%2C%20I%27m%20interested%20in%20a%20new%20website." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Open WhatsApp chat">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+    </div>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/accordion.js" defer></script>
+    <script src="js/whatsapp-widget.js" defer></script>
+</body>
+</html>
