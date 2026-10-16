@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#2563EB"/>
-  <path d="M8 16L14 10L20 16L14 22Z" fill="white"/>
-  <path d="M16 12L22 18" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <rect width="32" height="32" rx="4" fill="#231F20"/>
+  <!-- UltraTech High-Visibility Signature Yellow Slash -->
+  <polygon points="13,26 19,6 25,6 19,26" fill="#FFEE00"/>
+  <!-- Structural White Geometric Mark -->
+  <polygon points="7,26 12,11 16,11 11,26" fill="#FFFFFF"/>
 </svg>

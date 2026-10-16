@@ -1,4 +1,4 @@
-/* Pricing Page Specific Styles */
+/* Pricing Page Specific Styles - UltraTech Industrial Branding */
 
 /* Pricing Hero */
 .pricing-hero {
@@ -23,21 +23,22 @@
 
 .pricing-card {
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 2.5rem;
   border: 1px solid var(--color-border);
   position: relative;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   box-shadow: var(--shadow-sm);
 }
 
 .pricing-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
+  border-color: var(--color-dark);
 }
 
 .pricing-card--featured {
-  border-color: var(--color-primary);
+  border-color: var(--color-dark);
   border-width: 2px;
   transform: scale(1.02);
 }
@@ -48,28 +49,30 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 6px;
   background: var(--color-primary);
-  border-radius: 12px 12px 0 0;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
 .pricing-label {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   color: var(--color-text-secondary);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .pricing-name {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-heading);
   margin: 0.5rem 0;
 }
 
 .pricing-amount {
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-heading);
   color: var(--color-text-primary);
   display: flex;
   align-items: baseline;
@@ -98,17 +101,27 @@
   align-items: center;
   gap: 0.75rem;
   font-size: 0.95rem;
+  color: var(--color-text-primary);
 }
 
 .pricing-features li::before {
   content: '✓';
-  color: var(--color-success);
-  font-weight: 700;
+  color: var(--color-dark);
+  background-color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 800;
+  flex-shrink: 0;
 }
 
 .pricing-divider {
   border: none;
-  height: 1px;
+  height: 2px;
   background: var(--color-border);
   margin: 1.5rem 0;
 }
@@ -123,17 +136,23 @@
 .comparison-table th {
   padding: 1rem;
   text-align: left;
-  border-bottom: 2px solid var(--color-border);
-  font-weight: 600;
+  background: var(--color-dark);
+  color: var(--color-white);
+  border-bottom: 3px solid var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.9375rem;
 }
 
 .comparison-table td {
-  padding: 0.75rem 1rem;
+  padding: 0.875rem 1rem;
   border-bottom: 1px solid var(--color-border);
 }
 
 .comparison-table .check {
-  color: var(--color-success);
+  color: var(--color-dark);
+  font-weight: 700;
 }
 
 .comparison-table .cross {
@@ -141,7 +160,7 @@
   opacity: 0.5;
 }
 
-/* Responsive Table: horizontal scroll on mobile */
+/* Responsive Table */
 @media (max-width: 768px) {
   .comparison-table-wrapper {
     overflow-x: auto;

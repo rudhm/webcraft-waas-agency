@@ -1,11 +1,11 @@
-/* Local SME Landing Page Specific Styles */
+/* Local SME Landing Page Specific Styles - UltraTech Industrial Branding */
 
 /* Local Hero */
 .local-hero {
   min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #EFF6FF 0%, #F8FAFC 100%);
+  background: radial-gradient(circle at 60% 25%, rgba(255, 238, 0, 0.12) 0%, transparent 60%), #FFFFFF;
 }
 
 .local-hero-content {
@@ -23,7 +23,8 @@
 
 .local-hero h1 {
   font-size: clamp(1.75rem, 4vw, 3rem);
-  font-weight: 800;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-heading);
   line-height: 1.2;
 }
 
@@ -34,7 +35,7 @@
   background: #25D366;
   color: white;
   padding: 16px 32px;
-  border-radius: 50px;
+  border-radius: var(--radius-sm);
   font-size: 1.125rem;
   font-weight: 700;
   text-decoration: none;
@@ -46,25 +47,26 @@
 .whatsapp-cta-main:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(37,211,102,0.5);
+  background: #1EAB52;
 }
 
 .mobile-mockup {
   width: 280px;
   height: 500px;
   background: white;
-  border-radius: 32px;
-  border: 3px solid #1a1a1a;
+  border-radius: 28px;
+  border: 3px solid var(--color-dark);
   padding: 12px;
   margin: 0 auto;
   position: relative;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 50px rgba(35, 31, 32, 0.15);
 }
 
 .mobile-mockup::before {
   content: '';
   width: 80px;
   height: 6px;
-  background: #1a1a1a;
+  background: var(--color-dark);
   border-radius: 3px;
   position: absolute;
   top: 10px;
@@ -75,13 +77,15 @@
 .mobile-mockup-content {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #2563EB, #3B82F6);
-  border-radius: 24px;
+  background: linear-gradient(135deg, var(--color-dark), #383334);
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-weight: 600;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.125rem;
 }
 
 /* Pain Points */
@@ -100,7 +104,7 @@
 .pain-card {
   background: white;
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   text-align: center;
   border: 1px solid var(--color-border);
 }
@@ -111,7 +115,9 @@
 }
 
 .pain-card h3 {
-  color: #EF4444; /* red-ish to indicate pain */
+  color: #DC2626;
+  font-family: var(--font-heading);
+  font-weight: 700;
 }
 
 /* Solution Features */
@@ -132,20 +138,30 @@
   gap: 1.5rem;
   padding: 2rem;
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.solution-card:hover {
+  border-color: var(--color-dark);
+  box-shadow: var(--shadow-md);
 }
 
 .solution-icon {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   flex-shrink: 0;
-  background: var(--color-primary-lightest);
-  border-radius: 12px;
+  background: var(--color-primary);
+  color: var(--color-dark);
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(255, 238, 0, 0.35);
 }
 
 /* Case Study Cards */
@@ -163,24 +179,26 @@
 
 .case-study-card {
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 2rem;
   border: 1px solid var(--color-border);
 }
 
 .case-study-stats {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
   margin-top: 1rem;
 }
 
 .stat {
-  background: var(--color-primary-surface);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  background: var(--color-dark);
+  padding: 0.5rem 0.875rem;
+  border-radius: var(--radius-sm);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   color: var(--color-primary);
+  letter-spacing: 0.02em;
 }
 
 /* Local Pricing */
@@ -188,10 +206,12 @@
   max-width: 500px;
   margin: 0 auto;
   background: white;
-  border: 2px solid var(--color-primary);
-  border-radius: 16px;
+  border: 2px solid var(--color-dark);
+  border-top: 6px solid var(--color-primary);
+  border-radius: var(--radius-md);
   padding: 3rem;
   text-align: center;
+  box-shadow: var(--shadow-lg);
 }
 
 /* Contact Form */
@@ -200,13 +220,14 @@
   margin: 0 auto;
   background: white;
   padding: 2.5rem;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
   box-shadow: var(--shadow-md);
 }
 
 /* Sticky Mobile WhatsApp Bar */
 .sticky-whatsapp {
-  display: none; /* hidden on desktop */
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -232,7 +253,6 @@
     gap: 0.5rem;
   }
   
-  /* Hide the floating whatsapp widget on mobile for /local page */
   .whatsapp-widget {
     display: none;
   }

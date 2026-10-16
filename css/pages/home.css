@@ -1,4 +1,4 @@
-/* Home Page Specific Styles */
+/* Home Page Specific Styles - UltraTech Industrial Branding */
 
 /* Hero Section */
 .hero {
@@ -6,39 +6,46 @@
   display: flex;
   align-items: center;
   padding-top: 80px;
+  background: radial-gradient(circle at 50% 25%, rgba(255, 238, 0, 0.09) 0%, transparent 60%), #FFFFFF;
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 840px;
   text-align: center;
   margin: 0 auto;
 }
 
 .hero-badge {
-  background-color: var(--color-primary-lightest);
-  color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-dark);
   padding: 6px 16px;
-  border-radius: var(--radius-full);
-  font-size: 0.875rem;
-  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   margin-bottom: var(--space-6);
   display: inline-block;
+  border: 1px solid rgba(35, 31, 32, 0.15);
+  box-shadow: 0 2px 6px rgba(255, 238, 0, 0.3);
 }
 
 .hero h1 {
   font-size: clamp(2.25rem, 5vw, 3.75rem);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-bold);
   line-height: 1.1;
   margin-bottom: var(--space-6);
   color: var(--color-text-primary);
   font-family: var(--font-heading);
+  letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
   color: var(--color-text-secondary);
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto var(--space-8);
+  line-height: 1.6;
 }
 
 .hero-buttons {
@@ -51,38 +58,60 @@
 .hero-trust {
   margin-top: var(--space-8);
   font-size: 0.875rem;
-  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
   display: flex;
   gap: var(--space-6);
   justify-content: center;
   flex-wrap: wrap;
 }
 
+.hero-trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
 /* Features Section */
 .feature-card {
   text-align: center;
   padding: 2.5rem 2rem;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-dark);
 }
 
 .feature-icon {
   width: 64px;
   height: 64px;
-  background: var(--color-primary-lightest);
-  border-radius: var(--radius-xl);
+  background: var(--color-primary);
+  color: var(--color-dark);
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.75rem;
   margin: 0 auto var(--space-6);
+  box-shadow: 0 4px 12px rgba(255, 238, 0, 0.4);
 }
 
 .feature-card h3 {
   margin-bottom: var(--space-3);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
 }
 
 .feature-card p {
   color: var(--color-text-secondary);
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 /* How It Works Section */
@@ -94,19 +123,34 @@
   position: relative;
   padding: var(--space-8);
   text-align: center;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-normal);
+}
+
+.step-card:hover {
+  border-color: var(--color-dark);
+  box-shadow: var(--shadow-md);
 }
 
 .step-number {
-  font-size: 3rem;
-  font-weight: var(--font-weight-extrabold);
-  color: var(--color-primary-lightest);
+  font-size: 2.75rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
   font-family: var(--font-heading);
   line-height: 1;
   margin-bottom: var(--space-4);
+  display: inline-block;
+  border-bottom: 4px solid var(--color-primary);
+  padding-bottom: 4px;
 }
 
 .step-card h3 {
   margin-bottom: var(--space-3);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
 }
 
 /* Connecting line between steps on desktop */
@@ -114,11 +158,12 @@
   .step-card:not(:last-child)::after {
     content: '';
     position: absolute;
-    top: 5rem;
+    top: 4.5rem;
     right: -1rem;
     width: 2rem;
-    border-top: 2px dashed var(--color-border);
-    z-index: -1;
+    border-top: 3px dashed var(--color-dark);
+    opacity: 0.25;
+    z-index: 1;
   }
 }
 
