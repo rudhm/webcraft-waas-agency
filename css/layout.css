@@ -1,4 +1,4 @@
-/* Header - UltraTech Industrial Header with Signature Yellow Line */
+/* Header - Ultra Robotics Industrial Header with Neon Orange Accent Line */
 .header {
   position: fixed;
   top: 0;
@@ -9,7 +9,7 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 3px solid var(--color-primary);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 10px rgba(18, 18, 18, 0.05);
   transition: background-color var(--transition-normal);
 }
 
@@ -23,19 +23,19 @@
 
 .logo {
   font-family: var(--font-heading);
-  font-weight: var(--font-weight-bold);
-  font-size: 1.35rem;
+  font-weight: var(--font-weight-black);
+  font-size: 1.4rem;
   color: var(--color-dark);
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
   text-decoration: none;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
 }
 
 .logo:hover {
-  color: var(--color-black);
+  color: var(--color-primary);
 }
 
 .logo-slash {
@@ -46,6 +46,7 @@
   transform: skewX(-15deg);
   margin-right: 4px;
   flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
 }
 
 /* Desktop Navigation */
@@ -71,6 +72,7 @@
   position: relative;
   text-decoration: none;
   padding: 4px 0;
+  transition: color var(--transition-fast);
 }
 
 .nav-link::after {
@@ -86,7 +88,7 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--color-dark);
+  color: var(--color-primary);
 }
 
 .nav-link:hover::after,
@@ -131,7 +133,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
-  box-shadow: -4px 0 20px rgba(35, 31, 32, 0.1);
+  box-shadow: -4px 0 20px rgba(18, 18, 18, 0.15);
 }
 
 .mobile-menu.is-open {
@@ -144,12 +146,12 @@
   padding: var(--space-2) 0;
 }
 
-/* Footer - UltraTech Structural Dark Charcoal (#231F20) */
+/* Footer - Ultra Robotics Industrial Black (#121212) */
 .footer {
   background-color: var(--color-dark);
   color: var(--color-white);
   padding: var(--space-16) 0 var(--space-8) 0;
-  border-top: 5px solid var(--color-primary);
+  border-top: 4px solid var(--color-primary);
 }
 
 .footer-container {
@@ -182,7 +184,7 @@
 }
 
 .footer-brand p {
-  color: #B5B0AE;
+  color: #A3A3A3;
   max-width: 320px;
 }
 
@@ -197,13 +199,13 @@
   margin-bottom: var(--space-2);
   font-family: var(--font-heading);
   font-size: 0.9375rem;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
 .footer a {
-  color: #B5B0AE;
+  color: #A3A3A3;
   text-decoration: none;
   font-size: 0.9375rem;
   transition: color var(--transition-fast);
@@ -233,7 +235,8 @@
 
 .footer-social a:hover {
   background-color: var(--color-primary);
-  color: var(--color-dark);
+  color: var(--color-white);
+  box-shadow: 0 0 14px var(--color-primary-glow);
 }
 
 .footer-bottom {
@@ -254,7 +257,7 @@
 }
 
 .footer-bottom p {
-  color: #8C8687;
+  color: #737373;
   margin-bottom: 0;
   font-size: 0.875rem;
 }

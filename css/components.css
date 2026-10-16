@@ -1,11 +1,11 @@
-/* Buttons - UltraTech Industrial High-Contrast */
+/* Buttons - Ultra Robotics High-Octane Neon Orange & Industrial Black */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 12px 28px;
   font-family: var(--font-body);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   font-size: 0.9375rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -21,15 +21,16 @@
 
 .btn-primary {
   background-color: var(--color-primary);
-  color: var(--color-dark);
+  color: var(--color-white);
   border-color: var(--color-primary);
+  box-shadow: 0 4px 16px var(--color-primary-glow);
 }
 
 .btn-primary:hover {
   background-color: var(--color-dark);
   color: var(--color-primary);
   border-color: var(--color-dark);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 6px 24px rgba(255, 69, 0, 0.3);
 }
 
 .btn-secondary {
@@ -40,7 +41,7 @@
 
 .btn-secondary:hover {
   background-color: var(--color-dark);
-  color: var(--color-primary);
+  color: var(--color-white);
   box-shadow: var(--shadow-sm);
 }
 
@@ -66,7 +67,7 @@
   font-size: 0.8125rem;
 }
 
-/* Cards - Structural & Clean */
+/* Cards - Industrial Robotics Structural Quality */
 .card {
   background-color: var(--color-white);
   border-radius: var(--radius-md);
@@ -123,7 +124,7 @@
   background: none;
   border: none;
   font-family: var(--font-heading);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   font-size: 1.05rem;
   color: var(--color-text-primary);
   cursor: pointer;
@@ -135,13 +136,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  color: var(--color-dark);
+  font-weight: 800;
+  color: var(--color-primary);
 }
 
 .accordion-item.active .accordion-trigger .icon {
   transform: rotate(45deg);
-  color: var(--color-dark);
+  color: var(--color-primary-dark);
 }
 
 .accordion-content {
@@ -189,8 +190,8 @@
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   outline: none;
-  border-color: var(--color-dark);
-  box-shadow: 0 0 0 3px var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.2);
 }
 
 .form-textarea {
@@ -198,23 +199,23 @@
   resize: vertical;
 }
 
-/* Badges - Bold High-Visibility */
+/* Badges - Neon High-Octane Highlighting */
 .badge {
   display: inline-flex;
   align-items: center;
   padding: 4px 12px;
   border-radius: var(--radius-sm);
   font-size: 0.75rem;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .badge-primary {
-  background-color: var(--color-primary);
-  color: var(--color-dark);
-  border: 1px solid rgba(35, 31, 32, 0.2);
+  background-color: var(--color-primary-surface);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary-lightest);
 }
 
 .badge-success {
@@ -227,11 +228,10 @@
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--color-dark);
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-white);
   padding: 4px 14px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px var(--color-primary-glow);
 }
 
 /* Logo Grid */
@@ -243,17 +243,19 @@
   justify-items: center;
 }
 
-.logo-grid img {
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  opacity: 0.5;
   filter: grayscale(100%);
-  opacity: 0.6;
   transition: all var(--transition-normal);
-  max-width: 100%;
-  height: auto;
 }
 
-.logo-grid img:hover {
-  filter: grayscale(0%);
+.logo-item:hover {
   opacity: 1;
+  filter: none;
 }
 
 /* Feature Grid */
@@ -286,11 +288,11 @@
   width: 52px;
   height: 52px;
   background-color: var(--color-primary);
-  color: var(--color-dark);
+  color: var(--color-white);
   border-radius: var(--radius-sm);
   margin-bottom: var(--space-4);
   font-size: 1.5rem;
-  box-shadow: 0 4px 10px rgba(255, 238, 0, 0.35);
+  box-shadow: 0 4px 14px var(--color-primary-glow);
 }
 
 /* Section Styles */
@@ -311,7 +313,7 @@
   position: relative;
 }
 
-/* Signature UltraTech Yellow Angled Accent Line */
+/* Iconic Ultra Robotics Neon Orange Accent Line */
 .section-header::after {
   content: '';
   display: block;
@@ -320,10 +322,7 @@
   background-color: var(--color-primary);
   margin: var(--space-4) auto 0;
   transform: skewX(-20deg);
-}
-
-.section-title {
-  /* Inherits h2 from base.css */
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.4);
 }
 
 .section-subtitle {
@@ -449,7 +448,7 @@ body.no-scroll {
 .comparison-table th {
   background: var(--color-dark);
   color: var(--color-white);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -457,8 +456,8 @@ body.no-scroll {
 }
 
 .comparison-table td.check {
-  color: var(--color-dark);
-  font-weight: 700;
+  color: var(--color-primary);
+  font-weight: 800;
 }
 
 .comparison-table td.cross {
@@ -483,13 +482,13 @@ body.no-scroll {
 
 .pricing-name {
   font-size: 1.5rem;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   margin: var(--space-2) 0;
 }
 
 .pricing-amount {
   font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-black);
   color: var(--color-text-primary);
   line-height: 1.2;
   margin: var(--space-4) 0 var(--space-2);
@@ -509,7 +508,7 @@ body.no-scroll {
 .pricing-recurring {
   font-size: 1.125rem;
   font-weight: var(--font-weight-bold);
-  color: var(--color-dark);
+  color: var(--color-primary);
   margin-bottom: var(--space-2);
 }
 
@@ -543,7 +542,7 @@ body.no-scroll {
 
 .pricing-features li::before {
   content: '✓';
-  color: var(--color-dark);
+  color: var(--color-white);
   background-color: var(--color-primary);
   display: inline-flex;
   align-items: center;
@@ -569,7 +568,7 @@ body.no-scroll {
   margin: 0 auto;
 }
 
-/* CTA Box - UltraTech High-Contrast Dark & Yellow */
+/* CTA Box - Ultra Robotics Dark Charcoal & Neon Orange */
 .cta-box {
   background: var(--color-dark);
   color: var(--color-white);
@@ -578,15 +577,16 @@ body.no-scroll {
   max-width: 780px;
   margin: 0 auto;
   border-left: 6px solid var(--color-primary);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 16px 36px rgba(18, 18, 18, 0.25);
 }
 
 .cta-box h2 {
   color: var(--color-white);
+  font-weight: var(--font-weight-black);
 }
 
 .cta-box p {
-  color: #D1CFCD;
+  color: #D4D4D4;
   margin-bottom: var(--space-8);
 }
 
@@ -603,23 +603,7 @@ body.no-scroll {
   letter-spacing: 0.1em;
   color: var(--color-text-secondary);
   margin-bottom: var(--space-8);
-  font-weight: var(--font-weight-bold);
-}
-
-/* Logo items */
-.logo-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-4);
-  opacity: 0.5;
-  filter: grayscale(100%);
-  transition: all var(--transition-normal);
-}
-
-.logo-item:hover {
-  opacity: 1;
-  filter: none;
+  font-weight: var(--font-weight-extrabold);
 }
 
 /* WhatsApp widget visibility */

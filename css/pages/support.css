@@ -1,4 +1,4 @@
-/* Support Page Specific Styles - UltraTech Industrial Branding */
+/* Support Page Specific Styles - Ultra Robotics Industrial Branding */
 
 .support-hero {
   text-align: center;
@@ -67,7 +67,7 @@
 .contact-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: var(--color-dark);
+  border-color: var(--color-primary);
 }
 
 .contact-icon {

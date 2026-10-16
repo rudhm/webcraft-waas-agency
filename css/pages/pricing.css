@@ -1,4 +1,4 @@
-/* Pricing Page Specific Styles - UltraTech Industrial Branding */
+/* Pricing Page Specific Styles - Ultra Robotics Industrial Branding */
 
 /* Pricing Hero */
 .pricing-hero {
@@ -64,14 +64,14 @@
 
 .pricing-name {
   font-size: 1.5rem;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   font-family: var(--font-heading);
   margin: 0.5rem 0;
 }
 
 .pricing-amount {
   font-size: 3rem;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-black);
   font-family: var(--font-heading);
   color: var(--color-text-primary);
   display: flex;
@@ -106,7 +106,7 @@
 
 .pricing-features li::before {
   content: '✓';
-  color: var(--color-dark);
+  color: var(--color-white);
   background-color: var(--color-primary);
   display: inline-flex;
   align-items: center;
@@ -139,7 +139,7 @@
   background: var(--color-dark);
   color: var(--color-white);
   border-bottom: 3px solid var(--color-primary);
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: 0.9375rem;
@@ -151,8 +151,8 @@
 }
 
 .comparison-table .check {
-  color: var(--color-dark);
-  font-weight: 700;
+  color: var(--color-primary);
+  font-weight: 800;
 }
 
 .comparison-table .cross {

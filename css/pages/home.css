@@ -1,4 +1,4 @@
-/* Home Page Specific Styles - UltraTech Industrial Branding */
+/* Home Page Specific Styles - Ultra Robotics Industrial Branding */
 
 /* Hero Section */
 .hero {
@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   padding-top: 80px;
-  background: radial-gradient(circle at 50% 25%, rgba(255, 238, 0, 0.09) 0%, transparent 60%), #FFFFFF;
+  background: radial-gradient(circle at 50% 25%, rgba(255, 69, 0, 0.08) 0%, transparent 60%), #FFFFFF;
 }
 
 .hero-content {
@@ -17,22 +17,21 @@
 
 .hero-badge {
   background-color: var(--color-primary);
-  color: var(--color-dark);
+  color: var(--color-white);
   padding: 6px 16px;
   border-radius: var(--radius-sm);
   font-size: 0.8125rem;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-black);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: var(--space-6);
   display: inline-block;
-  border: 1px solid rgba(35, 31, 32, 0.15);
-  box-shadow: 0 2px 6px rgba(255, 238, 0, 0.3);
+  box-shadow: 0 4px 14px var(--color-primary-glow);
 }
 
 .hero h1 {
   font-size: clamp(2.25rem, 5vw, 3.75rem);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-black);
   line-height: 1.1;
   margin-bottom: var(--space-6);
   color: var(--color-text-primary);
@@ -92,21 +91,21 @@
   width: 64px;
   height: 64px;
   background: var(--color-primary);
-  color: var(--color-dark);
+  color: var(--color-white);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.75rem;
   margin: 0 auto var(--space-6);
-  box-shadow: 0 4px 12px rgba(255, 238, 0, 0.4);
+  box-shadow: 0 4px 16px var(--color-primary-glow);
 }
 
 .feature-card h3 {
   margin-bottom: var(--space-3);
   font-family: var(--font-heading);
   font-size: 1.25rem;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
 }
 
 .feature-card p {
@@ -136,7 +135,7 @@
 
 .step-number {
   font-size: 2.75rem;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-black);
   color: var(--color-dark);
   font-family: var(--font-heading);
   line-height: 1;
@@ -150,7 +149,7 @@
   margin-bottom: var(--space-3);
   font-family: var(--font-heading);
   font-size: 1.25rem;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
 }
 
 /* Connecting line between steps on desktop */
@@ -161,13 +160,13 @@
     top: 4.5rem;
     right: -1rem;
     width: 2rem;
-    border-top: 3px dashed var(--color-dark);
-    opacity: 0.25;
+    border-top: 3px dashed var(--color-primary);
+    opacity: 0.35;
     z-index: 1;
   }
 }
 
-/* Pricing Hero (reused on portfolio page) */
+/* Pricing Hero */
 .pricing-hero {
   text-align: center;
   padding-top: calc(80px + var(--space-16));

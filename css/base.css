@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 /* Modern CSS Reset */
 *, *::before, *::after {
@@ -24,19 +24,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography Base - UltraTech Brand Guideline */
+/* Typography Base - Ultra Robotics Industrial Heavy-Weight Sans-Serif */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--color-text-primary);
   margin-bottom: var(--space-4);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 h1 { 
   font-size: var(--font-size-h1); 
-  font-weight: var(--font-weight-bold); 
+  font-weight: var(--font-weight-black); 
 }
 h2 { 
   font-size: var(--font-size-h2); 
@@ -60,8 +60,8 @@ a {
 }
 
 a:hover {
-  color: var(--color-black);
-  text-decoration-color: var(--color-dark);
+  color: var(--color-primary);
+  text-decoration-color: var(--color-primary-dark);
 }
 
 ul, ol {
@@ -78,16 +78,16 @@ blockquote {
   background-color: var(--color-primary-surface);
 }
 
-/* Accessibility & Selection - UltraTech High-Contrast Yellow */
+/* Accessibility & Selection - Ultra Robotics Neon Orange */
 ::selection {
   background-color: var(--color-primary);
-  color: var(--color-dark);
+  color: var(--color-white);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-dark);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
-  box-shadow: 0 0 0 3px var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.25);
 }
 
 /* Utilities */
@@ -117,12 +117,14 @@ blockquote {
 }
 
 .text-gradient {
-  color: var(--color-dark);
-  background: linear-gradient(180deg, transparent 60%, var(--color-primary) 60%);
-  display: inline;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-alt));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: var(--font-weight-black);
 }
 
-/* Iconic UltraTech Slash Mark Accent */
+/* Iconic Ultra Robotics Brand Slash Accent */
 .brand-slash {
   display: inline-block;
   width: 6px;
@@ -131,6 +133,7 @@ blockquote {
   transform: skewX(-15deg);
   vertical-align: -0.1em;
   margin: 0 0.2em;
+  box-shadow: 0 0 8px rgba(255, 69, 0, 0.4);
 }
 
 /* Responsive Container */
