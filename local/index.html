@@ -190,11 +190,11 @@
                 <form class="contact-form" name="contact">
                     <div class="form-group">
                         <label class="form-label" for="name">आपका नाम / Your Name</label>
-                        <input class="form-input" type="text" id="name" name="name" placeholder="Enter your name" required>
+                        <input class="form-input" type="text" id="name" name="name" placeholder="Enter your name" required autocomplete="name" enterkeyhint="next" autocapitalize="words">
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="phone">फ़ोन नंबर / Phone Number</label>
-                        <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                        <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel" inputmode="tel" pattern="(\+91[\-\s]?)?[6789]\d{9}" title="Please enter a valid 10-digit Indian phone number" enterkeyhint="next">
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="business-type">बिज़नेस का प्रकार / Business Type</label>
@@ -211,8 +211,9 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="message">कुछ और बताएं / Tell us more</label>
-                        <textarea class="form-textarea" id="message" name="message" rows="4" placeholder="What would you like your website to do?"></textarea>
+                        <textarea class="form-textarea" id="message" name="message" rows="4" placeholder="What would you like your website to do?" enterkeyhint="send"></textarea>
                     </div>
+                    <div class="form-message" role="status" aria-live="polite"></div>
                     <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Enquiry</button>
                     <p class="text-center" style="margin-top: 1rem; color: var(--color-text-secondary);">
                         Or chat directly: <a href="https://wa.me/918103855878" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>

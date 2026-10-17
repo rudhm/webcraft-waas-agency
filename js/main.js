@@ -163,10 +163,31 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
-      // Simulate form submission success
       const submitBtn = contactForm.querySelector('button[type="submit"]');
+      let formMessage = contactForm.querySelector('.form-message');
+      if (!formMessage) {
+        formMessage = document.createElement('div');
+        formMessage.className = 'form-message';
+        formMessage.setAttribute('role', 'status');
+        formMessage.setAttribute('aria-live', 'polite');
+        contactForm.appendChild(formMessage);
+      }
+
+      // Validate Indian phone pattern if present
+      const phoneInput = contactForm.querySelector('#phone, input[type="tel"]');
+      if (phoneInput && phoneInput.value) {
+        const cleanPhone = phoneInput.value.replace(/[\s\-\(\)]/g, '');
+        const phonePattern = /^(\+91)?[6789]\d{9}$/;
+        if (!phonePattern.test(cleanPhone)) {
+          formMessage.className = 'form-message error-message';
+          formMessage.textContent = 'कृपया एक मान्य 10-अंकों का फ़ोन नंबर दर्ज करें / Please enter a valid 10-digit Indian phone number.';
+          formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          phoneInput.focus();
+          return;
+        }
+      }
+
       const originalText = submitBtn ? submitBtn.textContent : 'Submit';
-      
       if (submitBtn) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
@@ -179,28 +200,20 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.classList.add('success');
         }
         
-        // Show success message if a container exists
-        const formMessage = contactForm.querySelector('.form-message') || document.createElement('div');
-        if (!contactForm.querySelector('.form-message')) {
-          formMessage.className = 'form-message success-message';
-          contactForm.appendChild(formMessage);
-        }
-        formMessage.textContent = 'Thank you for your message. We will get back to you shortly.';
+        formMessage.className = 'form-message success-message';
+        formMessage.textContent = 'धन्यवाद! आपकी जानकारी प्राप्त हो गई है। हम जल्द ही संपर्क करेंगे। / Thank you! We will get back to you shortly.';
+        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         
         contactForm.reset();
 
-        // Reset button after 3 seconds
         setTimeout(() => {
           if (submitBtn) {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
             submitBtn.classList.remove('success');
           }
-          if (formMessage.parentNode) {
-            formMessage.parentNode.removeChild(formMessage);
-          }
-        }, 3000);
-      }, 1000);
+        }, 3500);
+      }, 800);
     });
   }
 });
