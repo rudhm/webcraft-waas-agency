@@ -258,30 +258,72 @@
   box-shadow: 0 4px 14px rgba(200, 50, 0, 0.4);
 }
 
-/* Logo Grid */
+/* Tech Stack Grid & Badges */
 .logo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: var(--space-8);
-  align-items: center;
-  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+  }
 }
 
 .logo-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-4);
-  opacity: 0.5;
-  filter: grayscale(100%);
-  transition: all var(--transition-normal);
+  gap: 0.625rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.875rem 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  user-select: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .logo-item:hover {
-    opacity: 1;
-    filter: none;
+    transform: translateY(-2px);
+    border-color: var(--color-dark);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   }
+}
+
+.logo-item-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-item-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.logo-item-name {
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+  font-family: var(--font-sans);
 }
 
 /* Feature Grid */
@@ -626,6 +668,21 @@ body.no-scroll {
   box-shadow: 0 16px 36px rgba(18, 18, 18, 0.25);
   overflow-wrap: anywhere;
   word-break: break-word;
+}
+
+.cta-box h2,
+.cta-box h3 {
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-black);
+}
+
+.cta-box p {
+  color: #D4D4D4;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.125rem;
 }
 
 @media (min-width: 768px) {
