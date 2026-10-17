@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const widget = document.querySelector('.whatsapp-widget');
   const tooltip = document.querySelector('.whatsapp-tooltip');
-  const phoneNumber = '919999999999'; // Base phone number
+  const phoneNumber = '918103855878'; // Base phone number
   const defaultMessage = "Hi, I'm interested in a new website.";
   
   if (!widget) return;
