@@ -127,50 +127,53 @@
                 <div class="section-header">
                     <h2 class="section-title">Plan Comparison</h2>
                 </div>
-                <div class="table-responsive">
+                <p class="table-scroll-hint text-center" aria-hidden="true">
+                    ← Scroll horizontally to compare plans →
+                </p>
+                <div class="table-responsive" tabindex="0" role="region" aria-label="Plan comparison table">
                     <table class="comparison-table">
                         <thead>
                             <tr>
-                                <th>Feature</th>
-                                <th>Setup Plan (Standard)</th>
-                                <th>Zero Down Plan (Growth)</th>
+                                <th scope="col">Feature</th>
+                                <th scope="col">Setup Plan (Standard)</th>
+                                <th scope="col">Zero Down Plan (Growth)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Upfront Cost</td>
+                                <th scope="row">Upfront Cost</th>
                                 <td>₹15,000</td>
                                 <td>₹0</td>
                             </tr>
                             <tr>
-                                <td>Monthly Cost</td>
+                                <th scope="row">Monthly Cost</th>
                                 <td>₹3,000</td>
                                 <td>₹6,000</td>
                             </tr>
                             <tr>
-                                <td>Monthly Updates</td>
+                                <th scope="row">Monthly Updates</th>
                                 <td>1 Hour</td>
                                 <td>2 Hours</td>
                             </tr>
                             <tr>
-                                <td>Support Channel</td>
+                                <th scope="row">Support Channel</th>
                                 <td>Email</td>
                                 <td>Priority + WhatsApp</td>
                             </tr>
                             <tr>
-                                <td>SEO Reports</td>
-                                <td class="cross">✗</td>
-                                <td class="check">✓</td>
+                                <th scope="row">SEO Reports</th>
+                                <td class="cross"><span class="sr-only">Not included</span><span aria-hidden="true">✗</span></td>
+                                <td class="check"><span class="sr-only">Included</span><span aria-hidden="true">✓</span></td>
                             </tr>
                             <tr>
-                                <td>Advanced Analytics</td>
-                                <td class="cross">✗</td>
-                                <td class="check">✓</td>
+                                <th scope="row">Advanced Analytics</th>
+                                <td class="cross"><span class="sr-only">Not included</span><span aria-hidden="true">✗</span></td>
+                                <td class="check"><span class="sr-only">Included</span><span aria-hidden="true">✓</span></td>
                             </tr>
                             <tr>
-                                <td>Dedicated Manager</td>
-                                <td class="cross">✗</td>
-                                <td class="check">✓</td>
+                                <th scope="row">Dedicated Manager</th>
+                                <td class="cross"><span class="sr-only">Not included</span><span aria-hidden="true">✗</span></td>
+                                <td class="check"><span class="sr-only">Included</span><span aria-hidden="true">✓</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -187,11 +190,11 @@
                 <div class="accordion faq-section" role="list">
 
                     <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-1">
+                        <button class="accordion-trigger" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1">
                             <span>Who owns the website?</span>
                             <span class="icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="accordion-content" id="faq-panel-1" role="region">
+                        <div class="accordion-content" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" hidden>
                             <div class="accordion-content-inner">
                                 <p>The website is licensed to you for use. Full ownership transfers to you after 36 consecutive monthly payments. During the licensing period, WebCraft retains ownership of the design and code to protect both parties.</p>
                             </div>
@@ -199,11 +202,11 @@
                     </div>
 
                     <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-2">
+                        <button class="accordion-trigger" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">
                             <span>What counts as a "minor update"?</span>
                             <span class="icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="accordion-content" id="faq-panel-2" role="region">
+                        <div class="accordion-content" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" hidden>
                             <div class="accordion-content-inner">
                                 <p>Minor updates include text changes, image swaps, adding/removing menu items, updating contact information, changing colors, and similar small modifications. Major structural changes, new pages, or feature additions are quoted separately.</p>
                             </div>
@@ -211,11 +214,11 @@
                     </div>
 
                     <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-3">
+                        <button class="accordion-trigger" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">
                             <span>How do I cancel my subscription?</span>
                             <span class="icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="accordion-content" id="faq-panel-3" role="region">
+                        <div class="accordion-content" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" hidden>
                             <div class="accordion-content-inner">
                                 <p>You can cancel at any time with 30 days written notice. For the Zero Down Plan, early termination within the 12-month commitment period may incur a fee equal to 3 months of subscription cost. After the commitment period, cancel freely.</p>
                             </div>
@@ -223,11 +226,11 @@
                     </div>
 
                     <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-4">
+                        <button class="accordion-trigger" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4">
                             <span>What happens if my payment fails?</span>
                             <span class="icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="accordion-content" id="faq-panel-4" role="region">
+                        <div class="accordion-content" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" hidden>
                             <div class="accordion-content-inner">
                                 <p>We provide a 7-day grace period for failed payments. During this time, your website remains fully operational. If payment is not resolved within 7 days, the site will be temporarily suspended until the balance is cleared.</p>
                             </div>
@@ -235,11 +238,11 @@
                     </div>
 
                     <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-5">
+                        <button class="accordion-trigger" id="faq-btn-5" aria-expanded="false" aria-controls="faq-panel-5">
                             <span>Do you offer custom development?</span>
                             <span class="icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="accordion-content" id="faq-panel-5" role="region">
+                        <div class="accordion-content" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5" hidden>
                             <div class="accordion-content-inner">
                                 <p>Yes! Our plans cover standard business websites. For e-commerce, custom web apps, or complex integrations, contact us for a custom quote.</p>
                             </div>
@@ -247,11 +250,11 @@
                     </div>
 
                     <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-6">
+                        <button class="accordion-trigger" id="faq-btn-6" aria-expanded="false" aria-controls="faq-panel-6">
                             <span>What's included in the hosting?</span>
                             <span class="icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="accordion-content" id="faq-panel-6" role="region">
+                        <div class="accordion-content" id="faq-panel-6" role="region" aria-labelledby="faq-btn-6" hidden>
                             <div class="accordion-content-inner">
                                 <p>Enterprise-grade cloud hosting on AWS/DigitalOcean with 99.9% uptime SLA, automatic SSL, daily backups, CDN delivery, and DDoS protection.</p>
                             </div>

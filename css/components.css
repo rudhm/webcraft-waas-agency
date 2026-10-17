@@ -169,6 +169,10 @@
   transition: max-height var(--transition-normal);
 }
 
+.accordion-content[hidden] {
+  display: none;
+}
+
 .accordion-item.active .accordion-content {
   max-height: 500px;
 }

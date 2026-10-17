@@ -139,10 +139,49 @@
   margin: 1.5rem 0;
 }
 
-/* Comparison Table */
+/* Comparison Table & Responsive Container */
+.table-scroll-hint {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+  font-weight: var(--font-weight-bold);
+}
+
+@media (min-width: 768px) {
+  .table-scroll-hint {
+    display: none;
+  }
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: var(--space-8);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  background:
+    linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 100% 0,
+    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)) 100% 0;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+.table-responsive:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 .comparison-table {
   width: 100%;
-  border-collapse: collapse;
+  min-width: 520px;
+  border-collapse: separate;
+  border-spacing: 0;
   margin: 0 auto;
 }
 
@@ -158,9 +197,34 @@
   font-size: 0.9375rem;
 }
 
-.comparison-table td {
+.comparison-table td,
+.comparison-table th[scope="row"] {
   padding: 0.875rem 1rem;
   border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  font-weight: normal;
+}
+
+.comparison-table th[scope="row"] {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+/* Sticky first column (Feature Name) on small viewports */
+.comparison-table th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  background-color: var(--color-dark);
+}
+
+.comparison-table td:first-child,
+.comparison-table th[scope="row"]:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: #ffffff;
+  border-right: 1px solid var(--color-border);
 }
 
 .comparison-table .check {
@@ -171,13 +235,6 @@
 .comparison-table .cross {
   color: var(--color-error);
   opacity: 0.5;
-}
-
-/* Responsive Table */
-@media (max-width: 768px) {
-  .comparison-table-wrapper {
-    overflow-x: auto;
-  }
 }
 
 /* FAQ Styles */
