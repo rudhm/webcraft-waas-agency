@@ -258,7 +258,19 @@
   box-shadow: 0 4px 14px rgba(200, 50, 0, 0.4);
 }
 
-/* Tech Stack Grid & Badges */
+/* Logo / Tech Stack Section */
+.logo-section {
+  padding: var(--space-8) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media (min-width: 768px) {
+  .logo-section {
+    padding: var(--space-12) 0;
+  }
+}
+
 .logo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -277,7 +289,7 @@
 @media (min-width: 1024px) {
   .logo-grid {
     grid-template-columns: repeat(6, 1fr);
-    gap: 1rem;
+    gap: 1.25rem;
   }
 }
 
@@ -285,45 +297,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 0.875rem 1rem;
+  padding: 0.75rem 1rem;
+  height: 58px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
   user-select: none;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .logo-item:hover {
-    transform: translateY(-2px);
-    border-color: var(--color-dark);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  }
-}
-
-.logo-item-icon {
-  width: 22px;
-  height: 22px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-item-icon svg {
-  width: 100%;
-  height: 100%;
+.logo-item img {
+  max-height: 28px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 
-.logo-item-name {
-  font-size: 0.9375rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
-  letter-spacing: -0.01em;
-  font-family: var(--font-sans);
+@media (hover: hover) and (pointer: fine) {
+  .logo-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 14px rgba(255, 69, 0, 0.12);
+  }
 }
 
 /* Feature Grid */
@@ -696,14 +694,14 @@ body.no-scroll {
   word-break: break-word;
 }
 
-/* Logo section title */
 .logo-section-title {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--color-text-secondary);
-  margin-bottom: var(--space-8);
-  font-weight: var(--font-weight-extrabold);
+  margin-bottom: var(--space-6);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-heading);
 }
 
 /* WhatsApp widget visibility - visible by default for progressive enhancement */
