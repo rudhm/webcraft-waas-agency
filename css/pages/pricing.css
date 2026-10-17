@@ -3,7 +3,7 @@
 /* Pricing Hero */
 .pricing-hero {
   text-align: center;
-  padding-top: calc(80px + 4rem);
+  padding-top: calc(var(--header-height) + 4rem);
 }
 
 /* Pricing Cards */

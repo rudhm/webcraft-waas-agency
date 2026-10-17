@@ -89,6 +89,7 @@
 
   /* Layout */
   --container-max-width: 1200px;
+  --header-height: 72px;
 
   /* Z-index */
   --z-header: 100;

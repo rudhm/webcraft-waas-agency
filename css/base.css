@@ -12,6 +12,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
   font-size: 16px;
 }
 
@@ -22,6 +23,12 @@ body {
   line-height: var(--line-height-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
 }
 
 /* Typography Base - Ultra Robotics Industrial Heavy-Weight Sans-Serif */

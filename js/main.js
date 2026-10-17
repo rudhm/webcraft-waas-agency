@@ -2,72 +2,101 @@
  * main.js - Core site functionality for WebCraft
  */
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Menu Toggle
+  // Mobile Menu Toggle & Focus Management
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   const mobileMenu = document.querySelector('.mobile-menu');
+  const header = document.querySelector('.header');
   const body = document.body;
 
   if (mobileMenuToggle && mobileMenu) {
-    const toggleMenu = () => {
-      const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true' || false;
-      mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
-      mobileMenuToggle.classList.toggle('active');
-      mobileMenu.classList.toggle('is-open');
-      body.classList.toggle('no-scroll');
+    const closeBtn = mobileMenu.querySelector('.mobile-menu-close');
+
+    const openMenu = () => {
+      mobileMenuToggle.setAttribute('aria-expanded', 'true');
+      mobileMenuToggle.setAttribute('aria-label', 'Close menu');
+      mobileMenuToggle.classList.add('active');
+      mobileMenu.classList.add('is-open');
+      if (header) header.classList.add('is-menu-open');
+      body.classList.add('no-scroll');
+
+      // Focus first element or close button
+      const firstFocusable = closeBtn || mobileMenu.querySelector('a, button');
+      if (firstFocusable) {
+        setTimeout(() => firstFocusable.focus(), 50);
+      }
     };
 
-    const closeMenu = () => {
+    const closeMenu = (restoreFocus = true) => {
+      if (!mobileMenu.classList.contains('is-open')) return;
       mobileMenuToggle.setAttribute('aria-expanded', 'false');
+      mobileMenuToggle.setAttribute('aria-label', 'Open menu');
       mobileMenuToggle.classList.remove('active');
       mobileMenu.classList.remove('is-open');
+      if (header) header.classList.remove('is-menu-open');
       body.classList.remove('no-scroll');
+
+      if (restoreFocus && mobileMenuToggle) {
+        mobileMenuToggle.focus();
+      }
+    };
+
+    const toggleMenu = () => {
+      const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        closeMenu(true);
+      } else {
+        openMenu();
+      }
     };
 
     mobileMenuToggle.addEventListener('click', toggleMenu);
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => closeMenu(true));
+    }
 
     // Close on nav link click
     const navLinks = mobileMenu.querySelectorAll('a');
     navLinks.forEach(link => {
-      link.addEventListener('click', closeMenu);
+      link.addEventListener('click', () => closeMenu(false));
     });
 
     // Close on Escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
-        closeMenu();
+        closeMenu(true);
       }
     });
 
     // Close on click outside
     document.addEventListener('click', (e) => {
       if (mobileMenu.classList.contains('is-open') && !mobileMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
-        closeMenu();
+        closeMenu(true);
       }
     });
-  }
 
-  // Smooth Scrolling
-  const anchorLinks = document.querySelectorAll('a[href^="#"]');
-  const header = document.querySelector('.header');
+    // Focus trap while open
+    mobileMenu.addEventListener('keydown', (e) => {
+      if (e.key !== 'Tab') return;
+      const focusables = Array.from(
+        mobileMenu.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
+      ).filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
 
-  anchorLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
 
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
+      if (e.shiftKey && document.activeElement === first) {
         e.preventDefault();
-        const headerHeight = header ? header.offsetHeight : 80;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
-        
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
       }
     });
-  });
+
+    // Close on back/forward cache restore
+    window.addEventListener('pageshow', () => closeMenu(false));
+  }
 
   // Header Scroll Effect
   let lastScrollY = window.scrollY;

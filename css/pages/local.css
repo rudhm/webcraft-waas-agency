@@ -2,7 +2,7 @@
 
 /* Local Hero */
 .local-hero {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
   background: radial-gradient(circle at 60% 25%, rgba(255, 69, 0, 0.1) 0%, transparent 60%), #FFFFFF;
