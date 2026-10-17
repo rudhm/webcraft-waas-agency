@@ -3,7 +3,7 @@
 .legal-content {
   max-width: 800px;
   margin: 0 auto;
-  padding-top: calc(80px + 3rem);
+  padding-top: calc(var(--header-height) + 3rem);
   padding-bottom: 4rem;
 }
 

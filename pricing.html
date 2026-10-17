@@ -2,17 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="light">
     <title>Pricing — WebCraft | Transparent WaaS Plans</title>
     <meta name="description" content="Choose from our transparent Website-as-a-Service plans. Setup Plan from ₹15,000 or Zero Down Plan with no upfront costs.">
 
+    <meta name="theme-color" content="#121212">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+    <!-- Open Graph & Social Preview -->
     <meta property="og:title" content="Pricing — WebCraft | Transparent WaaS Plans">
     <meta property="og:description" content="Choose from our transparent Website-as-a-Service plans. Setup Plan from ₹15,000 or Zero Down Plan with no upfront costs.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/og-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pricing — WebCraft | Transparent WaaS Plans">
+    <meta name="twitter:description" content="Choose from our transparent Website-as-a-Service plans. Setup Plan from ₹15,000 or Zero Down Plan with no upfront costs.">
+    <meta name="twitter:image" content="assets/images/og-preview.png">
 
+    <!-- Progressive Enhancement & Font Preconnects -->
+    <script>document.documentElement.classList.add('js');</script>
+    <noscript><style>.animate-on-scroll { opacity: 1 !important; transform: none !important; }</style></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
@@ -27,7 +42,29 @@
     <!-- Header -->
     <header class="header" role="banner">
         <div class="container header-container">
-            <a href="/" class="logo" aria-label="WebCraft Home"><span class="logo-slash" aria-hidden="true"></span>WebCraft</a>
+            <a href="/" class="logo" aria-label="WebCraft Home">
+                <svg class="logo-svg" viewBox="210 408 742 84" width="212" height="24" aria-hidden="true" focusable="false">
+                    <defs>
+                        <linearGradient id="header-logo-grad" gradientUnits="userSpaceOnUse" x1="270" y1="0" x2="950" y2="0">
+                            <stop offset="0" stop-color="#121212"/>
+                            <stop offset="1" stop-color="#7A7A7A"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M235 410 H252 L229 490 H212 Z" fill="#FF4500"/>
+                    <g fill="none" stroke="url(#header-logo-grad)" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+                        <path d="M275 410 L292 490 L310 438 L328 490 L345 410"/>
+                        <path d="M380 410 H430 M380 410 V490 H430 M380 450 H421"/>
+                        <path d="M465 410 V490"/>
+                        <path d="M465 410 H494 C507 410 515 418 515 430 C515 442 507 450 493 450 H465"/>
+                        <path d="M465 450 H495 C509 450 517 458 517 470 C517 482 509 490 495 490 H465"/>
+                        <path d="M600 418 H576 C559 418 550 430 550 450 C550 470 559 482 576 482 H600"/>
+                        <path d="M635 490 V410 H664 C678 410 686 418 686 431 C686 444 678 452 664 452 H635 M660 452 L688 490"/>
+                        <path d="M722 490 L750 410 L778 490 M735 458 H765"/>
+                        <path d="M813 490 V410 H860 M813 450 H849"/>
+                        <path d="M895 410 H950 M922.5 410 V490"/>
+                    </g>
+                </svg>
+            </a>
 
             <nav class="nav" role="navigation" aria-label="Main navigation">
                 <a href="/" class="nav-link">Home</a>
@@ -46,7 +83,9 @@
             </button>
         </div>
 
-        <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+            <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
             <a href="/" class="nav-link">Home</a>
             <a href="portfolio.html" class="nav-link">Portfolio</a>
             <a href="pricing.html" class="nav-link active">Pricing</a>
@@ -69,53 +108,121 @@
             <div class="container">
                 <div class="pricing-grid">
 
-                    <!-- Card 1: Setup Plan (Standard) -->
+                    <!-- Card 1: Setup Plan -->
+                    <!-- Card 1: Setup Plan -->
                     <div class="card pricing-card">
-                        <span class="badge badge-primary">Standard</span>
-                        <h2 class="pricing-name">Setup Plan</h2>
-                        <div class="pricing-amount">
-                            <span class="currency">₹</span>15,000
-                            <span class="period">one-time setup</span>
+                        <div>
+                            <div class="pricing-badge-wrap">
+                                <span class="badge-offer">FOUNDING CLIENT OFFER — FIRST 5 ONLY</span>
+                            </div>
+                            <h2 class="pricing-name">Setup Plan</h2>
+                            <div class="pricing-amount">
+                                <div class="pricing-price-wrap">
+                                    <span class="pricing-anchor-price" style="text-decoration: line-through; color: #9CA3AF; font-size: 1.25rem;">₹15,000</span>
+                                    <span class="pricing-val"><span class="currency">₹</span>9,999</span>
+                                </div>
+                                <span class="period">one-time setup</span>
+                            </div>
+                            <p class="pricing-recurring">+ ₹999/mo maintenance</p>
+                            <p class="pricing-subnote">Or pay ₹15,999 once (includes 1 full year of hosting &amp; support)</p>
+                            <hr class="pricing-divider">
+                            <ul class="pricing-features" aria-label="Setup Plan features">
+                                <li>5-Page Custom Mobile Website (Home, About, Services, Gallery, Contact)</li>
+                                <li>One-Tap Floating WhatsApp Inquiry Button</li>
+                                <li>Google Business Profile (Google Maps) Ranking Setup</li>
+                                <li>Fast Cloud Hosting &amp; Free .in / .com Domain Included</li>
+                                <li>Direct WhatsApp &amp; Phone Support</li>
+                                <li>1 Hour Monthly Photo &amp; Text Updates</li>
+                                <li>Weekly Backups &amp; Security Monitoring</li>
+                            </ul>
                         </div>
-                        <p class="pricing-recurring">+ ₹3,000/mo</p>
-                        <hr class="pricing-divider">
-                        <ul class="pricing-features" aria-label="Setup Plan features">
-                            <li>Managed Cloud Hosting</li>
-                            <li>Free SSL Certificate</li>
-                            <li>1 Hour Monthly Updates</li>
-                            <li>24/7 Email Support</li>
-                            <li>Weekly Backups</li>
-                            <li>Performance Monitoring</li>
-                            <li>Basic SEO Setup</li>
-                        </ul>
-                        <a href="#razorpay-setup" class="btn btn-primary" data-plan="setup" style="width:100%">Get Started</a>
-                        <p class="pricing-note">5-7 business days delivery</p>
+                        <div class="pricing-card-footer">
+                            <a href="https://wa.me/918103855878?text=Hi%20WebCraft%2C%20I%20want%20to%20claim%20the%20Rs%209%2C999%20Setup%20Plan%20for%20my%20business." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%">CLAIM FOUNDING OFFER</a>
+                            <p class="pricing-note">5-7 business days delivery • 50% deposit to start</p>
+                        </div>
                     </div>
 
-                    <!-- Card 2: Zero Down Plan (Growth) — FEATURED -->
+                    <!-- Card 2: Zero Down Plan — FEATURED -->
                     <div class="card pricing-card pricing-card--featured">
-                        <span class="badge badge-popular">Most Popular</span>
-                        <h2 class="pricing-name">Zero Down Plan</h2>
-                        <div class="pricing-amount">
-                            <span class="currency">₹</span>0
-                            <span class="period">upfront</span>
+                        <span class="badge badge-popular">MOST POPULAR</span>
+                        <div>
+                            <div class="pricing-badge-spacer" aria-hidden="true"></div>
+                            <h2 class="pricing-name">Zero Down Plan</h2>
+                            <div class="pricing-amount">
+                                <div class="pricing-price-wrap">
+                                    <span class="pricing-val"><span class="currency">₹</span>0</span>
+                                </div>
+                                <span class="period">upfront</span>
+                            </div>
+                            <p class="pricing-recurring">₹2,499/mo</p>
+                            <p class="pricing-subnote">12-month commitment • ₹999 one-time domain &amp; onboarding fee (Only ~₹83/day)</p>
+                            <hr class="pricing-divider">
+                            <ul class="pricing-features" aria-label="Zero Down Plan features">
+                                <li>Everything in Setup Plan</li>
+                                <li>Interactive Cost / Booking Calculator</li>
+                                <li>Custom QR Code Standee for Reception Desk (Google Reviews + Website)</li>
+                                <li>Priority WhatsApp &amp; Call Support</li>
+                                <li>2 Hours Monthly Updates + Festival Offer Banners</li>
+                                <li>Monthly Google Maps &amp; Search Traffic Report</li>
+                                <li>Easy UPI AutoPay Integration</li>
+                            </ul>
                         </div>
-                        <p class="pricing-recurring">₹6,000/mo</p>
-                        <p class="pricing-commitment">12-month commitment</p>
-                        <hr class="pricing-divider">
-                        <ul class="pricing-features" aria-label="Zero Down Plan features">
-                            <li>Everything in Setup Plan</li>
-                            <li>Priority Support (WhatsApp)</li>
-                            <li>2 Hours Monthly Updates</li>
-                            <li>Monthly SEO Reports</li>
-                            <li>Advanced Analytics Dashboard</li>
-                            <li>UPI AutoPay Integration</li>
-                            <li>Dedicated Account Manager</li>
-                        </ul>
-                        <a href="#razorpay-subscription" class="btn btn-primary" data-plan="growth" style="width:100%">Start Free</a>
-                        <p class="pricing-note">Keep your cash flow. Pay as you grow.</p>
+                        <div class="pricing-card-footer">
+                            <a href="https://wa.me/918103855878?text=Hi%20WebCraft%2C%20I%20am%20interested%20in%20the%20Rs%202%2C499%2Fmo%20Zero%20Down%20Website%20Plan." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%">START AT ₹0 UPFRONT</a>
+                            <p class="pricing-note">Keep your cash flow. Pay as you grow.</p>
+                        </div>
                     </div>
 
+                    <!-- Card 3: Growth & Industrial Plan -->
+                    <div class="card pricing-card">
+                        <div>
+                            <div class="pricing-badge-wrap">
+                                <span class="badge-offer">FOR HOSPITALS, BUILDERS &amp; FACTORIES</span>
+                            </div>
+                            <h2 class="pricing-name">Growth &amp; Industrial</h2>
+                            <div class="pricing-amount">
+                                <div class="pricing-price-wrap">
+                                    <span class="pricing-val"><span class="currency">₹</span>24,999</span>
+                                </div>
+                                <span class="period">one-time setup</span>
+                            </div>
+                            <p class="pricing-recurring">+ ₹1,500/mo maintenance</p>
+                            <p class="pricing-subnote">Built for Multi-Specialty Clinics, Contractors, Hotels &amp; Industrial Suppliers</p>
+                            <hr class="pricing-divider">
+                            <ul class="pricing-features" aria-label="Growth &amp; Industrial features">
+                                <li>Everything in Zero Down Plan</li>
+                                <li>Up to 10 Custom Pages + Full Product/Service Catalog</li>
+                                <li>Before/After Image Slider &amp; Custom Lead Estimator</li>
+                                <li>20+ Local SEO City/Area Landing Pages (Maihar, Satna, Katni, Rewa)</li>
+                                <li>100/100 Mobile PageSpeed &amp; Performance Optimization</li>
+                                <li>Dedicated Account Manager &amp; Priority Turnaround</li>
+                                <li>Custom Staff/Reception Lead Handling Setup</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-card-footer">
+                            <a href="https://wa.me/918103855878?text=Hi%20WebCraft%2C%20I%20want%20to%20discuss%20the%20Growth%20%26%20Industrial%20Plan%20for%20my%20company." target="_blank" rel="noopener noreferrer" class="btn btn-dark" style="width:100%">BOOK FREE CONSULTATION</a>
+                            <p class="pricing-note">7-day delivery • 50% deposit to start</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Trust Bar Below Cards -->
+                <div class="pricing-trust-bar" aria-label="Customer trust and satisfaction assurances">
+                    <div class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">✓</span>
+                        <span>No Hidden Charges</span>
+                    </div>
+                    <span class="trust-divider" aria-hidden="true">•</span>
+                    <div class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">✓</span>
+                        <span>Local In-Person &amp; WhatsApp Support</span>
+                    </div>
+                    <span class="trust-divider" aria-hidden="true">•</span>
+                    <div class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">✓</span>
+                        <span>Free Live Homepage Preview Before You Pay</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -126,50 +233,79 @@
                 <div class="section-header">
                     <h2 class="section-title">Plan Comparison</h2>
                 </div>
-                <div class="table-responsive">
+                <p class="table-scroll-hint text-center" aria-hidden="true">
+                    ← Scroll horizontally to compare plans →
+                </p>
+                <div class="table-responsive" tabindex="0" role="region" aria-label="Plan comparison table">
                     <table class="comparison-table">
                         <thead>
                             <tr>
-                                <th>Feature</th>
-                                <th>Setup Plan (Standard)</th>
-                                <th>Zero Down Plan (Growth)</th>
+                                <th scope="col">Feature</th>
+                                <th scope="col">Setup Plan</th>
+                                <th scope="col">Zero Down Plan</th>
+                                <th scope="col">Growth &amp; Industrial</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Upfront Cost</td>
-                                <td>₹15,000</td>
-                                <td>₹0</td>
+                                <th scope="row">Upfront Cost</th>
+                                <td>₹9,999 <span style="text-decoration: line-through; color: #9CA3AF; font-size: 0.85em;">(₹15,000)</span></td>
+                                <td>₹0 upfront</td>
+                                <td>₹24,999</td>
                             </tr>
                             <tr>
-                                <td>Monthly Cost</td>
-                                <td>₹3,000</td>
-                                <td>₹6,000</td>
+                                <th scope="row">Monthly Maintenance</th>
+                                <td>₹999/mo</td>
+                                <td>₹2,499/mo</td>
+                                <td>₹1,500/mo</td>
                             </tr>
                             <tr>
-                                <td>Monthly Updates</td>
-                                <td>1 Hour</td>
-                                <td>2 Hours</td>
+                                <th scope="row">Page Count</th>
+                                <td>5 Custom Pages</td>
+                                <td>5 Custom Pages</td>
+                                <td>Up to 10 Pages + Catalog</td>
                             </tr>
                             <tr>
-                                <td>Support Channel</td>
-                                <td>Email</td>
-                                <td>Priority + WhatsApp</td>
+                                <th scope="row">Domain &amp; Cloud Hosting</th>
+                                <td class="check"><span class="sr-only">Included</span><span aria-hidden="true">✓</span> Included</td>
+                                <td class="check"><span class="sr-only">Included</span><span aria-hidden="true">✓</span> Included</td>
+                                <td class="check"><span class="sr-only">Included</span><span aria-hidden="true">✓</span> Included</td>
                             </tr>
                             <tr>
-                                <td>SEO Reports</td>
-                                <td class="cross">✗</td>
-                                <td class="check">✓</td>
+                                <th scope="row">Monthly Updates</th>
+                                <td>1 Hour Text/Photo</td>
+                                <td>2 Hours + Festival Banners</td>
+                                <td>Priority Turnaround</td>
                             </tr>
                             <tr>
-                                <td>Advanced Analytics</td>
-                                <td class="cross">✗</td>
-                                <td class="check">✓</td>
+                                <th scope="row">Support Channel</th>
+                                <td>WhatsApp &amp; Phone</td>
+                                <td>Priority Call &amp; WhatsApp</td>
+                                <td>Dedicated Account Manager</td>
                             </tr>
                             <tr>
-                                <td>Dedicated Manager</td>
-                                <td class="cross">✗</td>
-                                <td class="check">✓</td>
+                                <th scope="row">Google Business Profile (Maps)</th>
+                                <td class="check"><span class="sr-only">Included</span><span aria-hidden="true">✓</span> Ranking Setup</td>
+                                <td class="check"><span class="sr-only">Included</span><span aria-hidden="true">✓</span> Setup + QR Standee</td>
+                                <td class="check"><span class="sr-only">Included</span><span aria-hidden="true">✓</span> Setup + 20+ Area Pages</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Interactive Lead / Booking Tool</th>
+                                <td class="cross"><span class="sr-only">Not included</span><span aria-hidden="true">✗</span></td>
+                                <td class="check"><span class="sr-only">Included</span><span aria-hidden="true">✓</span> Cost / Booking Calculator</td>
+                                <td class="check"><span class="sr-only">Included</span><span aria-hidden="true">✓</span> Custom Lead Estimator</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Local SEO Area Pages</th>
+                                <td class="cross"><span class="sr-only">Not included</span><span aria-hidden="true">✗</span></td>
+                                <td class="cross"><span class="sr-only">Not included</span><span aria-hidden="true">✗</span></td>
+                                <td class="check"><span class="sr-only">Included</span><span aria-hidden="true">✓</span> 20+ Area Landing Pages</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Delivery Timeline</th>
+                                <td>5-7 Business Days</td>
+                                <td>5-7 Business Days</td>
+                                <td>7 Days</td>
                             </tr>
                         </tbody>
                     </table>
@@ -186,11 +322,11 @@
                 <div class="accordion faq-section" role="list">
 
                     <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-1">
+                        <button class="accordion-trigger" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1">
                             <span>Who owns the website?</span>
                             <span class="icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="accordion-content" id="faq-panel-1" role="region">
+                        <div class="accordion-content" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" hidden>
                             <div class="accordion-content-inner">
                                 <p>The website is licensed to you for use. Full ownership transfers to you after 36 consecutive monthly payments. During the licensing period, WebCraft retains ownership of the design and code to protect both parties.</p>
                             </div>
@@ -198,11 +334,11 @@
                     </div>
 
                     <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-2">
+                        <button class="accordion-trigger" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">
                             <span>What counts as a "minor update"?</span>
                             <span class="icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="accordion-content" id="faq-panel-2" role="region">
+                        <div class="accordion-content" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" hidden>
                             <div class="accordion-content-inner">
                                 <p>Minor updates include text changes, image swaps, adding/removing menu items, updating contact information, changing colors, and similar small modifications. Major structural changes, new pages, or feature additions are quoted separately.</p>
                             </div>
@@ -210,11 +346,11 @@
                     </div>
 
                     <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-3">
+                        <button class="accordion-trigger" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">
                             <span>How do I cancel my subscription?</span>
                             <span class="icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="accordion-content" id="faq-panel-3" role="region">
+                        <div class="accordion-content" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" hidden>
                             <div class="accordion-content-inner">
                                 <p>You can cancel at any time with 30 days written notice. For the Zero Down Plan, early termination within the 12-month commitment period may incur a fee equal to 3 months of subscription cost. After the commitment period, cancel freely.</p>
                             </div>
@@ -222,11 +358,11 @@
                     </div>
 
                     <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-4">
+                        <button class="accordion-trigger" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4">
                             <span>What happens if my payment fails?</span>
                             <span class="icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="accordion-content" id="faq-panel-4" role="region">
+                        <div class="accordion-content" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" hidden>
                             <div class="accordion-content-inner">
                                 <p>We provide a 7-day grace period for failed payments. During this time, your website remains fully operational. If payment is not resolved within 7 days, the site will be temporarily suspended until the balance is cleared.</p>
                             </div>
@@ -234,11 +370,11 @@
                     </div>
 
                     <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-5">
+                        <button class="accordion-trigger" id="faq-btn-5" aria-expanded="false" aria-controls="faq-panel-5">
                             <span>Do you offer custom development?</span>
                             <span class="icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="accordion-content" id="faq-panel-5" role="region">
+                        <div class="accordion-content" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5" hidden>
                             <div class="accordion-content-inner">
                                 <p>Yes! Our plans cover standard business websites. For e-commerce, custom web apps, or complex integrations, contact us for a custom quote.</p>
                             </div>
@@ -246,11 +382,11 @@
                     </div>
 
                     <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-6">
+                        <button class="accordion-trigger" id="faq-btn-6" aria-expanded="false" aria-controls="faq-panel-6">
                             <span>What's included in the hosting?</span>
                             <span class="icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="accordion-content" id="faq-panel-6" role="region">
+                        <div class="accordion-content" id="faq-panel-6" role="region" aria-labelledby="faq-btn-6" hidden>
                             <div class="accordion-content-inner">
                                 <p>Enterprise-grade cloud hosting on AWS/DigitalOcean with 99.9% uptime SLA, automatic SSL, daily backups, CDN delivery, and DDoS protection.</p>
                             </div>
@@ -281,7 +417,29 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-brand">
-                    <a href="/" class="logo"><span class="logo-slash" aria-hidden="true"></span>WebCraft</a>
+                    <a href="/" class="logo" aria-label="WebCraft Home">
+                        <svg class="logo-svg" viewBox="210 408 742 84" width="212" height="24" aria-hidden="true" focusable="false">
+                            <defs>
+                                <linearGradient id="footer-logo-grad" gradientUnits="userSpaceOnUse" x1="270" y1="0" x2="950" y2="0">
+                                    <stop offset="0" stop-color="#FFFFFF"/>
+                                    <stop offset="1" stop-color="#C0C0C0"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M235 410 H252 L229 490 H212 Z" fill="#FF4500"/>
+                            <g fill="none" stroke="url(#footer-logo-grad)" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+                                <path d="M275 410 L292 490 L310 438 L328 490 L345 410"/>
+                                <path d="M380 410 H430 M380 410 V490 H430 M380 450 H421"/>
+                                <path d="M465 410 V490"/>
+                                <path d="M465 410 H494 C507 410 515 418 515 430 C515 442 507 450 493 450 H465"/>
+                                <path d="M465 450 H495 C509 450 517 458 517 470 C517 482 509 490 495 490 H465"/>
+                                <path d="M600 418 H576 C559 418 550 430 550 450 C550 470 559 482 576 482 H600"/>
+                                <path d="M635 490 V410 H664 C678 410 686 418 686 431 C686 444 678 452 664 452 H635 M660 452 L688 490"/>
+                                <path d="M722 490 L750 410 L778 490 M735 458 H765"/>
+                                <path d="M813 490 V410 H860 M813 450 H849"/>
+                                <path d="M895 410 H950 M922.5 410 V490"/>
+                            </g>
+                        </svg>
+                    </a>
                     <p>High-performance websites that drive revenue for your business.</p>
                 </div>
                 <div class="footer-links">

@@ -2,17 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="light">
     <title>Portfolio — WebCraft | Our Work</title>
     <meta name="description" content="See our portfolio of high-performance websites built for businesses worldwide.">
 
+    <meta name="theme-color" content="#121212">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+    <!-- Open Graph & Social Preview -->
     <meta property="og:title" content="Portfolio — WebCraft | Our Work">
     <meta property="og:description" content="See our portfolio of high-performance websites built for businesses worldwide.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/og-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio — WebCraft | Our Work">
+    <meta name="twitter:description" content="See our portfolio of high-performance websites built for businesses worldwide.">
+    <meta name="twitter:image" content="assets/images/og-preview.png">
 
+    <!-- Progressive Enhancement & Font Preconnects -->
+    <script>document.documentElement.classList.add('js');</script>
+    <noscript><style>.animate-on-scroll { opacity: 1 !important; transform: none !important; }</style></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
@@ -27,7 +42,29 @@
     <!-- Header -->
     <header class="header" role="banner">
         <div class="container header-container">
-            <a href="/" class="logo" aria-label="WebCraft Home"><span class="logo-slash" aria-hidden="true"></span>WebCraft</a>
+            <a href="/" class="logo" aria-label="WebCraft Home">
+                <svg class="logo-svg" viewBox="210 408 742 84" width="212" height="24" aria-hidden="true" focusable="false">
+                    <defs>
+                        <linearGradient id="header-logo-grad" gradientUnits="userSpaceOnUse" x1="270" y1="0" x2="950" y2="0">
+                            <stop offset="0" stop-color="#121212"/>
+                            <stop offset="1" stop-color="#7A7A7A"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M235 410 H252 L229 490 H212 Z" fill="#FF4500"/>
+                    <g fill="none" stroke="url(#header-logo-grad)" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+                        <path d="M275 410 L292 490 L310 438 L328 490 L345 410"/>
+                        <path d="M380 410 H430 M380 410 V490 H430 M380 450 H421"/>
+                        <path d="M465 410 V490"/>
+                        <path d="M465 410 H494 C507 410 515 418 515 430 C515 442 507 450 493 450 H465"/>
+                        <path d="M465 450 H495 C509 450 517 458 517 470 C517 482 509 490 495 490 H465"/>
+                        <path d="M600 418 H576 C559 418 550 430 550 450 C550 470 559 482 576 482 H600"/>
+                        <path d="M635 490 V410 H664 C678 410 686 418 686 431 C686 444 678 452 664 452 H635 M660 452 L688 490"/>
+                        <path d="M722 490 L750 410 L778 490 M735 458 H765"/>
+                        <path d="M813 490 V410 H860 M813 450 H849"/>
+                        <path d="M895 410 H950 M922.5 410 V490"/>
+                    </g>
+                </svg>
+            </a>
 
             <nav class="nav" role="navigation" aria-label="Main navigation">
                 <a href="/" class="nav-link">Home</a>
@@ -46,7 +83,9 @@
             </button>
         </div>
 
-        <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+            <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
             <a href="/" class="nav-link">Home</a>
             <a href="portfolio.html" class="nav-link active">Portfolio</a>
             <a href="pricing.html" class="nav-link">Pricing</a>
@@ -67,6 +106,7 @@
         <!-- Portfolio Grid -->
         <section class="section">
             <div class="container">
+                <h2 class="sr-only">Featured Client Projects</h2>
                 <div class="portfolio-grid">
 
                     <div class="card portfolio-card animate-on-scroll">
@@ -83,7 +123,7 @@
                     </div>
 
                     <div class="card portfolio-card animate-on-scroll">
-                        <div class="portfolio-preview" style="background: linear-gradient(135deg, #059669, #10B981); aspect-ratio: 16/9; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem;">
+                        <div class="portfolio-preview" style="background: linear-gradient(135deg, #059669, #10B981); aspect-ratio: 16/9; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem;">
                             SaaS Landing Page
                         </div>
                         <h3>SaaS Landing Page</h3>
@@ -96,7 +136,7 @@
                     </div>
 
                     <div class="card portfolio-card animate-on-scroll">
-                        <div class="portfolio-preview" style="background: linear-gradient(135deg, #DC2626, #F59E0B); aspect-ratio: 16/9; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem;">
+                        <div class="portfolio-preview" style="background: linear-gradient(135deg, #DC2626, #F59E0B); aspect-ratio: 16/9; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem;">
                             Restaurant Chain
                         </div>
                         <h3>Restaurant Chain</h3>
@@ -109,7 +149,7 @@
                     </div>
 
                     <div class="card portfolio-card animate-on-scroll">
-                        <div class="portfolio-preview" style="background: linear-gradient(135deg, #0891B2, #06B6D4); aspect-ratio: 16/9; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem;">
+                        <div class="portfolio-preview" style="background: linear-gradient(135deg, #0891B2, #06B6D4); aspect-ratio: 16/9; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem;">
                             Healthcare Clinic
                         </div>
                         <h3>Healthcare Clinic</h3>
@@ -122,7 +162,7 @@
                     </div>
 
                     <div class="card portfolio-card animate-on-scroll">
-                        <div class="portfolio-preview" style="background: linear-gradient(135deg, #7C3AED, #A855F7); aspect-ratio: 16/9; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem;">
+                        <div class="portfolio-preview" style="background: linear-gradient(135deg, #7C3AED, #A855F7); aspect-ratio: 16/9; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem;">
                             Real Estate Agency
                         </div>
                         <h3>Real Estate Agency</h3>
@@ -135,7 +175,7 @@
                     </div>
 
                     <div class="card portfolio-card animate-on-scroll">
-                        <div class="portfolio-preview" style="background: linear-gradient(135deg, #EA580C, #F97316); aspect-ratio: 16/9; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem;">
+                        <div class="portfolio-preview" style="background: linear-gradient(135deg, #EA580C, #F97316); aspect-ratio: 16/9; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem;">
                             Fitness Studio
                         </div>
                         <h3>Fitness Studio</h3>
@@ -171,7 +211,29 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-brand">
-                    <a href="/" class="logo"><span class="logo-slash" aria-hidden="true"></span>WebCraft</a>
+                    <a href="/" class="logo" aria-label="WebCraft Home">
+                        <svg class="logo-svg" viewBox="210 408 742 84" width="212" height="24" aria-hidden="true" focusable="false">
+                            <defs>
+                                <linearGradient id="footer-logo-grad" gradientUnits="userSpaceOnUse" x1="270" y1="0" x2="950" y2="0">
+                                    <stop offset="0" stop-color="#FFFFFF"/>
+                                    <stop offset="1" stop-color="#C0C0C0"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M235 410 H252 L229 490 H212 Z" fill="#FF4500"/>
+                            <g fill="none" stroke="url(#footer-logo-grad)" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+                                <path d="M275 410 L292 490 L310 438 L328 490 L345 410"/>
+                                <path d="M380 410 H430 M380 410 V490 H430 M380 450 H421"/>
+                                <path d="M465 410 V490"/>
+                                <path d="M465 410 H494 C507 410 515 418 515 430 C515 442 507 450 493 450 H465"/>
+                                <path d="M465 450 H495 C509 450 517 458 517 470 C517 482 509 490 495 490 H465"/>
+                                <path d="M600 418 H576 C559 418 550 430 550 450 C550 470 559 482 576 482 H600"/>
+                                <path d="M635 490 V410 H664 C678 410 686 418 686 431 C686 444 678 452 664 452 H635 M660 452 L688 490"/>
+                                <path d="M722 490 L750 410 L778 490 M735 458 H765"/>
+                                <path d="M813 490 V410 H860 M813 450 H849"/>
+                                <path d="M895 410 H950 M922.5 410 V490"/>
+                            </g>
+                        </svg>
+                    </a>
                     <p>High-performance websites that drive revenue for your business.</p>
                 </div>
                 <div class="footer-links">

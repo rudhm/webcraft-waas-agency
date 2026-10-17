@@ -2,10 +2,11 @@
 
 /* Hero Section */
 .hero {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - var(--header-height));
+  min-height: calc(85svh - var(--header-height));
   display: flex;
   align-items: center;
-  padding-top: 80px;
+  padding-top: var(--header-height);
   background: radial-gradient(circle at 50% 25%, rgba(255, 69, 0, 0.08) 0%, transparent 60%), #FFFFFF;
 }
 
@@ -16,7 +17,7 @@
 }
 
 .hero-badge {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-dark);
   color: var(--color-white);
   padding: 6px 16px;
   border-radius: var(--radius-sm);
@@ -26,7 +27,7 @@
   letter-spacing: 0.08em;
   margin-bottom: var(--space-6);
   display: inline-block;
-  box-shadow: 0 4px 14px var(--color-primary-glow);
+  box-shadow: 0 4px 14px rgba(200, 50, 0, 0.4);
 }
 
 .hero h1 {
@@ -81,10 +82,16 @@
   transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
 }
 
-.feature-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-dark);
+.feature-card:active {
+  transform: scale(0.99);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-dark);
+  }
 }
 
 .feature-icon {
@@ -128,9 +135,15 @@
   transition: all var(--transition-normal);
 }
 
-.step-card:hover {
-  border-color: var(--color-dark);
-  box-shadow: var(--shadow-md);
+.step-card:active {
+  transform: scale(0.99);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .step-card:hover {
+    border-color: var(--color-dark);
+    box-shadow: var(--shadow-md);
+  }
 }
 
 .step-number {
@@ -153,7 +166,7 @@
 }
 
 /* Connecting line between steps on desktop */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .step-card:not(:last-child)::after {
     content: '';
     position: absolute;
@@ -169,17 +182,6 @@
 /* Pricing Hero */
 .pricing-hero {
   text-align: center;
-  padding-top: calc(80px + var(--space-16));
+  padding-top: calc(var(--header-height) + var(--space-16));
 }
 
-/* Animations */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.animate-on-scroll.animated {
-  opacity: 1;
-  transform: translateY(0);
-}
