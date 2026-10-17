@@ -97,7 +97,7 @@
 
 .pricing-anchor-price {
   text-decoration: line-through;
-  color: #9CA3AF;
+  color: #6B7280;
   font-size: 1.25rem;
   font-weight: 600;
   white-space: nowrap;
@@ -170,7 +170,7 @@
 }
 
 .trust-divider {
-  color: var(--color-border);
+  color: var(--color-text-secondary);
   font-size: 1.25rem;
   user-select: none;
 }

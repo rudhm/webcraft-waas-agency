@@ -135,8 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (animateElements.length > 0 && 'IntersectionObserver' in window) {
     const observerOptions = {
       root: null,
-      rootMargin: '0px',
-      threshold: 0.1
+      rootMargin: '0px 0px 80px 0px',
+      threshold: 0.05
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -149,6 +149,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     animateElements.forEach(el => observer.observe(el));
+
+    // Safety fallback: reveal all elements after 2s so content is never stuck hidden
+    setTimeout(() => {
+      animateElements.forEach(el => el.classList.add('animated'));
+    }, 2000);
   } else {
     // Fallback for older browsers
     animateElements.forEach(el => el.classList.add('animated'));
