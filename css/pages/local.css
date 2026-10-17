@@ -46,10 +46,16 @@
   margin-top: 1.5rem;
 }
 
-.whatsapp-cta-main:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37,211,102,0.5);
-  background: #1EAB52;
+.whatsapp-cta-main:active {
+  transform: scale(0.98);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .whatsapp-cta-main:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37,211,102,0.5);
+    background: #1EAB52;
+  }
 }
 
 .mobile-mockup {
@@ -154,9 +160,15 @@
   transition: all var(--transition-normal);
 }
 
-.solution-card:hover {
-  border-color: var(--color-dark);
-  box-shadow: var(--shadow-md);
+.solution-card:active {
+  transform: scale(0.99);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .solution-card:hover {
+    border-color: var(--color-dark);
+    box-shadow: var(--shadow-md);
+  }
 }
 
 .solution-icon {

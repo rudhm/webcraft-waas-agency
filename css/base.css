@@ -16,6 +16,11 @@ html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(255, 69, 0, 0.15);
+}
+
+a, button, input, select, textarea, summary, [role="button"] {
+  touch-action: manipulation;
 }
 
 body {
@@ -31,6 +36,16 @@ body.no-scroll {
   overflow: hidden;
   touch-action: none;
   overscroll-behavior: none;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Typography Base - Ultra Robotics Industrial Heavy-Weight Sans-Serif */
@@ -69,9 +84,15 @@ a {
   transition: all var(--transition-normal);
 }
 
-a:hover {
-  color: var(--color-primary);
-  text-decoration-color: var(--color-primary-dark);
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    color: var(--color-primary);
+    text-decoration-color: var(--color-primary-dark);
+  }
+}
+
+a:active {
+  color: var(--color-primary-dark);
 }
 
 ul, ol {
