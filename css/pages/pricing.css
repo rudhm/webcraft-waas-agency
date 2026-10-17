@@ -120,7 +120,7 @@
 .pricing-features li::before {
   content: '✓';
   color: var(--color-white);
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-dark);
   display: inline-flex;
   align-items: center;
   justify-content: center;

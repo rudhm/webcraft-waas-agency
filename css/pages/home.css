@@ -17,7 +17,7 @@
 }
 
 .hero-badge {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-dark);
   color: var(--color-white);
   padding: 6px 16px;
   border-radius: var(--radius-sm);
@@ -27,7 +27,7 @@
   letter-spacing: 0.08em;
   margin-bottom: var(--space-6);
   display: inline-block;
-  box-shadow: 0 4px 14px var(--color-primary-glow);
+  box-shadow: 0 4px 14px rgba(200, 50, 0, 0.4);
 }
 
 .hero h1 {

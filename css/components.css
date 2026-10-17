@@ -22,10 +22,10 @@
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-dark);
   color: var(--color-white);
-  border-color: var(--color-primary);
-  box-shadow: 0 4px 16px var(--color-primary-glow);
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 4px 16px rgba(200, 50, 0, 0.35);
 }
 
 .btn-secondary {
@@ -236,7 +236,7 @@
 
 .badge-primary {
   background-color: var(--color-primary-surface);
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   border: 1px solid var(--color-primary-lightest);
 }
 
@@ -250,10 +250,10 @@
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-dark);
   color: var(--color-white);
   padding: 4px 14px;
-  box-shadow: 0 4px 14px var(--color-primary-glow);
+  box-shadow: 0 4px 14px rgba(200, 50, 0, 0.4);
 }
 
 /* Logo Grid */
@@ -567,7 +567,7 @@ body.no-scroll {
 .pricing-features li::before {
   content: '✓';
   color: var(--color-white);
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-dark);
   display: inline-flex;
   align-items: center;
   justify-content: center;
