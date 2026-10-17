@@ -603,16 +603,11 @@ body.no-scroll {
   font-weight: var(--font-weight-extrabold);
 }
 
-/* WhatsApp widget visibility */
+/* WhatsApp widget visibility - visible by default for progressive enhancement */
 .whatsapp-widget {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
-}
-
-.whatsapp-widget.visible {
   opacity: 1;
   transform: translateY(0);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
 /* Form messages */
