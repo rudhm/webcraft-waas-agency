@@ -1,9 +1,9 @@
 /**
- * main.js - Core site functionality for WebCraft
+ * main.js - Core site functionality for A2Labs
  * 
  * CANONICAL ORIGIN CONFIGURATION (Section 3 Decision):
  * When canonical production domain is officially confirmed, update this constant:
- * e.g., 'https://tech.teamaastudios.com' or 'https://webcraft.agency'
+ * e.g., 'https://tech.teamaastudios.com' or 'https://a2labs.agency'
  */
 const SITE_CANONICAL_ORIGIN = window.location.origin;
 

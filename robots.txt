@@ -5,4 +5,4 @@ Allow: /
 Disallow: /local/
 
 # Sitemap
-Sitemap: https://webcraft.com/sitemap.xml
+Sitemap: https://a2labs.com/sitemap.xml
