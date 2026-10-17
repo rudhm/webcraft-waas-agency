@@ -3,6 +3,7 @@
 /* Hero Section */
 .hero {
   min-height: calc(100vh - var(--header-height));
+  min-height: calc(85svh - var(--header-height));
   display: flex;
   align-items: center;
   padding-top: var(--header-height);
@@ -153,7 +154,7 @@
 }
 
 /* Connecting line between steps on desktop */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .step-card:not(:last-child)::after {
     content: '';
     position: absolute;

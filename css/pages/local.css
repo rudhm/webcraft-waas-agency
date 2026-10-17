@@ -3,6 +3,7 @@
 /* Local Hero */
 .local-hero {
   min-height: calc(100vh - var(--header-height));
+  min-height: calc(85svh - var(--header-height));
   display: flex;
   align-items: center;
   background: radial-gradient(circle at 60% 25%, rgba(255, 69, 0, 0.1) 0%, transparent 60%), #FFFFFF;
@@ -10,14 +11,15 @@
 
 .local-hero-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
   align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .local-hero-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
   }
 }
 
@@ -91,13 +93,20 @@
 /* Pain Points */
 .pain-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .pain-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pain-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -123,13 +132,14 @@
 /* Solution Features */
 .solution-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .solution-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
@@ -167,13 +177,20 @@
 /* Case Study Cards */
 .case-study-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .case-study-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .case-study-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

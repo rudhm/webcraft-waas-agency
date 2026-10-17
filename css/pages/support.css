@@ -7,13 +7,20 @@
 
 .support-steps {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .support-steps {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .support-steps {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -45,13 +52,20 @@
 
 .contact-options {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .contact-options {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-options {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
