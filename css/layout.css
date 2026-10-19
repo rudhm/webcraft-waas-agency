@@ -31,10 +31,11 @@
   align-items: center;
   text-decoration: none;
   line-height: 1;
+  color: var(--color-dark);
 }
 
 .logo-svg {
-  height: 22px;
+  height: 26px;
   width: auto;
   max-width: 100%;
   display: block;
@@ -43,13 +44,13 @@
 
 @media (min-width: 480px) {
   .logo-svg {
-    height: 25px;
+    height: 28px;
   }
 }
 
 @media (min-width: 1024px) {
   .logo-svg {
-    height: 28px;
+    height: 32px;
   }
 }
 
@@ -57,13 +58,17 @@
   opacity: 0.85;
 }
 
+.footer-brand .logo {
+  color: var(--color-white);
+}
+
 .footer-brand .logo-svg {
-  height: 24px;
+  height: 28px;
 }
 
 @media (min-width: 1024px) {
   .footer-brand .logo-svg {
-    height: 26px;
+    height: 32px;
   }
 }
 

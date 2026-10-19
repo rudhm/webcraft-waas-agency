@@ -1,7 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="4" fill="#121212"/>
-  <!-- Ultra Robotics Vibrant Neon Orange Slash -->
-  <polygon points="13,26 19,6 25,6 19,26" fill="#FF4500"/>
-  <!-- Crisp White Structural Mark -->
-  <polygon points="7,26 12,11 16,11 11,26" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="A2Labs">
+  <rect width="512" height="512" rx="118" fill="#141417"/>
+  <rect width="504" height="504" x="4" y="4" rx="114" fill="none" stroke="#26262B" stroke-width="8"/>
+  <g transform="translate(96, 96) scale(3.2)">
+    <path d="M50 12L94 92H80L50 37.5L20 92H6Z" fill="#FFFFFF"/>
+    <path d="M50 55.6L70 92H58L50 77.5L42 92H30Z" fill="#2F5BFF"/>
+  </g>
 </svg>
