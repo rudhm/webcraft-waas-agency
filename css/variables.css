@@ -1,14 +1,14 @@
 :root {
-  /* Ultra Robotics Corp Brand Colors */
-  /* Primary Neon / Industrial Orange */
-  --color-primary: #FF4500;
-  --color-primary-alt: #FF5500;
-  --color-primary-hover: #E03E00;
-  --color-primary-dark: #C83200;
-  --color-primary-light: #FF6A33;
-  --color-primary-lightest: #FFE8E0;
-  --color-primary-surface: #FFF4F0;
-  --color-primary-glow: rgba(255, 69, 0, 0.35);
+  /* A2Labs Brand Colors */
+  /* Primary Electric Blue */
+  --color-primary: #2F5BFF;
+  --color-primary-alt: #5B7CFF;
+  --color-primary-hover: #2448D9;
+  --color-primary-dark: #1E3FB8;
+  --color-primary-light: #7B96FF;
+  --color-primary-lightest: #DDE5FF;
+  --color-primary-surface: #F1F4FF;
+  --color-primary-glow: rgba(47, 91, 255, 0.28);
   --color-primary-text: #FFFFFF;
 
   /* Dark Charcoal / Industrial Black */
