@@ -1,21 +1,20 @@
 :root {
-  /* A2Labs Brand Colors */
-  /* Primary Electric Blue */
-  --color-primary: #2F5BFF;
-  --color-primary-alt: #5B7CFF;
-  --color-primary-hover: #2448D9;
-  --color-primary-dark: #1E3FB8;
-  --color-primary-light: #7B96FF;
-  --color-primary-lightest: #DDE5FF;
-  --color-primary-surface: #F1F4FF;
-  --color-primary-glow: rgba(47, 91, 255, 0.28);
+  /* A2Labs Brand Colors — ink, ivory, and cobalt */
+  --color-primary: #3157D5;
+  --color-primary-alt: #6B7FF2;
+  --color-primary-hover: #2746B2;
+  --color-primary-dark: #1D347F;
+  --color-primary-light: #A9B6FF;
+  --color-primary-lightest: #DDE3FF;
+  --color-primary-surface: #EEF1FF;
+  --color-primary-glow: rgba(49, 87, 213, 0.24);
   --color-primary-text: #FFFFFF;
 
-  /* Dark Charcoal / Industrial Black */
-  --color-dark: #121212;
-  --color-dark-surface: #1A1A1A;
-  --color-dark-card: #1E1E1E;
-  --color-black: #0A0A0A;
+  /* Deep Ink / Night Surfaces */
+  --color-dark: #111827;
+  --color-dark-surface: #19243A;
+  --color-dark-card: #22304A;
+  --color-black: #0A1020;
 
   /* WhatsApp */
   --color-whatsapp: #25D366;
